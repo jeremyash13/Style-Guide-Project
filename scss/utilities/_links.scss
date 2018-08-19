@@ -1,0 +1,11 @@
+.link {
+  color: $color-default;
+}
+
+.nav a {
+  color: $color-text;
+}
+
+.nav__item:first-child a {
+  color: $color-white;
+}

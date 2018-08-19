@@ -1,0 +1,6 @@
+.container {
+  font-family: $font-main;
+  @include font($font-regular, normal);
+  letter-spacing: em(.7px);
+  line-height: em(30px);
+}

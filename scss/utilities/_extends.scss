@@ -1,0 +1,32 @@
+//Screen reader text
+%srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+//Baseline button properties
+%btn {
+	@include font($font-semibold, normal, $font-color: $color-white);
+	text-transform: uppercase;
+	width: 100%;
+	padding: em(15px) 0;
+	border: none;
+	border-radius: $brdr-radius;
+	margin-bottom: em(30px);
+}
+
+//Baseline grid item properties
+%grid-item {
+	@include font($font-semibold, normal, $font-color: $color-text);
+	width: 100%;
+	padding: em(10px);
+	border: none;
+	border-radius: $brdr-radius;
+	margin-bottom: em(8px);
+}

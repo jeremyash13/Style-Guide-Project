@@ -1,0 +1,79 @@
+//*************//
+//**Variables**//
+//*************//
+
+
+//Colors
+$color-text: #818181;
+$color-white: white;
+
+$color-default: #51ddfc;
+$color-success: #58e1c1;
+$color-error: #e4757a;
+$color-warning: #fd7856;
+$color-info: #927bc1;
+
+//Color Palette
+$color-palette: (
+
+  default: (
+  xx-light : lighten($color-default, 22%),
+  x-light  : lighten($color-default, 16%),
+  light    : lighten($color-default, 6%),
+  base     : $color-default,
+  dark     : darken($color-default, 12%),
+  x-dark   : darken($color-default, 26%)
+  ),
+  success: (
+  xx-light : lighten($color-success, 22%),
+  x-light  : lighten($color-success, 16%),
+  light    : lighten($color-success, 6%),
+  base     : $color-success,
+  dark     : darken($color-success, 8%),
+  x-dark   : darken($color-success, 16%)
+  ),
+  error: (
+  xx-light : lighten($color-error, 22%),
+  x-light  : lighten($color-error, 16%),
+  light    : lighten($color-error, 8%),
+  base     : $color-error,
+  dark     : darken($color-error, 8%),
+  x-dark   : darken($color-error, 16%)
+  ),
+  warning: (
+  xx-light : lighten($color-warning, 22%),
+  x-light  : lighten($color-warning, 16%),
+  light    : lighten($color-warning, 8%),
+  base     : $color-warning,
+  dark     : darken($color-warning, 8%),
+  x-dark   : darken($color-warning, 16%)
+  ),
+  info: (
+  xx-light : lighten($color-info, 22%),
+  x-light  : lighten($color-info, 14%),
+  light    : lighten($color-info, 12%),
+  base     : $color-info,
+  dark     : darken($color-info, 8%),
+  x-dark   : darken($color-info, 16%)
+  ),
+);
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i);
+$font-main: 'Montserrat', sans-serif;
+
+$font-size-root: 16px;
+
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+//Breakpoints
+$brkpoint-sm: 1px;
+$brkpoint-md: 768px;
+$brkpoint-lg: 1100px;
+
+//Misc.
+$brdr-radius: 6px;

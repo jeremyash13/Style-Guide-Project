@@ -1,0 +1,9 @@
+.headline {
+  &--primary {
+    color: palette(success);
+    padding-left: em(10px);
+  }
+  &--secondary {
+    font-weight: $font-light;
+  }
+}

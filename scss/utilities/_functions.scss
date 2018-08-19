@@ -1,0 +1,9 @@
+//converts px to em
+@function em($target, $context: $font-size-root) {
+  @return #{$target/$context}em;
+}
+
+// Call the color palette
+@function palette($palette, $shade: 'base') {
+	@return map-get(map-get($color-palette, $palette), $shade);
+}

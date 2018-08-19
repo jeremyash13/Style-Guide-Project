@@ -1,0 +1,60 @@
+//Assigns a font weight, style, size, and color to some text
+@mixin font($font-weight: 400, $font-style: normal, $font-size: $font-size-root, $font-color: $color-text) {
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-size: $font-size;
+  color: $font-color;
+
+};
+
+//Media Queries
+@mixin mq($break) {
+  @if $break == 'small' {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break =='medium' {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == 'large' {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error 'No value could be retrieved for `#{$break}`.'
+  }
+};
+
+//Flexy sets a container to flex and specifies it's direction
+@mixin flexy($direction) {
+  display: flex;
+
+  @if $direction == 'col' {
+    flex-direction: column;
+  }
+  @else if $direction == 'revcol' {
+    flex-direction: column-reverse;
+  }
+
+  @else if $direction == 'row' {
+    flex-direction: row;
+  }
+  @else if $direction == 'revrow' {
+    flex-direction: row-reverse;
+  }
+  @else {
+    @error '`#{$direction}` is an invalid flex direction'
+  }
+};
+
+@mixin g-columns {
+  @for $i from 2 through 12 {
+    &#{$i} {
+      @extend %grid-item;
+    }
+  }
+}

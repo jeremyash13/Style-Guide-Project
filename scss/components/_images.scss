@@ -1,0 +1,6 @@
+.img--frame {
+  padding: em(15px);
+  border: solid 1px lighten($color-text, 30%);
+  border-radius: ($brdr-radius - 5);
+  margin-bottom: em(25px);
+}
