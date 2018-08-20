@@ -75,5 +75,14 @@ $brkpoint-sm: 1px;
 $brkpoint-md: 768px;
 $brkpoint-lg: 1100px;
 
+//Max Width
+$max-width: 1200px;
+
+//Grid
+$g-col-width: 150px;
+$g-gutter-width: 15px;
+$g-col-count: 12;
+$g-cont-max-w: $max-width;
+
 //Misc.
 $brdr-radius: 6px;

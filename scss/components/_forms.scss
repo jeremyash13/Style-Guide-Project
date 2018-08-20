@@ -19,6 +19,11 @@
 }
 
 .form .img--avatar {
-  margin: 0 auto;
-  margin-bottom: em(35px);
+  margin: em(35px) auto;
+}
+
+.form {
+  @include mq(medium) {
+    margin-top: em(20px);
+  }
 }

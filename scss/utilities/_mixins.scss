@@ -29,7 +29,7 @@
   }
 };
 
-//Flexy sets a container to flex and specifies it's direction
+//Flexy sets a container to flex and specifies it's flex-direction
 @mixin flexy($direction) {
   display: flex;
 
@@ -51,10 +51,26 @@
   }
 };
 
+// @for $i from 3 through $g-col-count {
+//   $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+//   $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
+//
+//   .grid__col--#{$i} {
+//     width: percentage($target / $context);
+//   }
+// }
+
 @mixin g-columns {
   @for $i from 2 through 12 {
     &#{$i} {
       @extend %grid-item;
     }
+  }
+}
+
+@mixin gutter($gutter-size) {
+  margin-right: $gutter-size;
+  &:last-child {
+    margin-right: 0;
   }
 }

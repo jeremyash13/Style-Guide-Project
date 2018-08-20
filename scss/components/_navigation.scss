@@ -1,8 +1,7 @@
 .nav {
   &__item {
     text-align: center;
-    padding-top: em(10px);
-    padding-bottom: em(10px);
+    padding: em(6px) 0;
     border-radius: $brdr-radius;
 
     &:first-child {
@@ -10,6 +9,14 @@
     }
   }
 }
+
+.nav a {
+  padding: em(8px) em(60px);
+  @include mq(medium) {
+    padding: em(10px);
+  }
+}
+
 nav {
   margin-top: em(40px);
 }

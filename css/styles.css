@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i);
 @import url(../../css/normalize.css);
+.centered {
+  margin: 0 auto; }
+
 .form__label--hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -19,8 +22,7 @@
   width: 100%;
   padding: 0.9375em 0;
   border: none;
-  border-radius: 6px;
-  margin-bottom: 1.875em; }
+  border-radius: 6px; }
 
 .grid__col--2, .grid__col--3, .grid__col--4, .grid__col--5, .grid__col--6, .grid__col--7, .grid__col--8, .grid__col--9, .grid__col--10, .grid__col--11, .grid__col--12 {
   font-weight: 600;
@@ -30,8 +32,7 @@
   width: 100%;
   padding: 0.625em;
   border: none;
-  border-radius: 6px;
-  margin-bottom: 0.5em; }
+  border-radius: 6px; }
 
 .headline--primary {
   color: #58e1c1;
@@ -64,7 +65,9 @@ ul {
   line-height: 1.875em; }
 
 .container {
-  padding: 0 3.125em; }
+  max-width: 1200px;
+  padding: 0 1.5625em;
+  margin: 0 auto; }
 
 .form {
   display: flex;
@@ -74,8 +77,88 @@ ul {
   display: flex;
   flex-direction: column;
   margin-bottom: 3.125em;
-  margin-top: 3.75em;
   width: 100%; }
+  @media (min-width: 769px) {
+    .grid__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.grid__col--3 {
+  display: flex;
+  flex-direction: row; }
+  .grid__col--3 .link {
+    margin: 0 auto;
+    margin-top: 1.25em; }
+    @media (min-width: 769px) {
+      .grid__col--3 .link {
+        margin-left: 0.9375em; } }
+  @media (min-width: 769px) {
+    .grid__col--3 {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.9375em; }
+      .grid__col--3:last-child {
+        margin-right: 0; } }
+
+@media (min-width: 769px) {
+  .grid__col--5 {
+    margin-right: 0.9375em; } }
+
+@media (min-width: 769px) {
+  .grid__col--7 {
+    width: 75%; } }
+
+@media (min-width: 769px) {
+  .grid__col--8 {
+    flex: 2;
+    margin-right: 0.9375em; } }
+
+@media (min-width: 769px) {
+  .grid__col--4 {
+    flex: 1;
+    margin-right: 0.9375em; }
+    .grid__col--4:last-child {
+      margin-right: 0; } }
+
+.grid__col--6 {
+  display: flex;
+  flex-direction: row;
+  margin: 0; }
+  .grid__col--6 .img--frame {
+    margin: 0 auto; }
+  .grid__col--6 .img--avatar {
+    margin: 0 auto; }
+  @media (min-width: 769px) {
+    .grid__col--6 {
+      margin-right: 0.9375em; }
+      .grid__col--6:last-child {
+        margin-right: 0; } }
+
+@media (min-width: 769px) {
+  .grid__col--12 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; } }
+
+@media (min-width: 769px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%; } }
+
+.blockquote {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25em;
+  color: #818181;
+  padding-left: 0.625em;
+  border-left: solid 6px #58e1c1;
+  border-radius: 3px;
+  margin-bottom: 3.125em;
+  margin-left: 1em; }
 
 [class*="grid__col--12 theme__colors"] {
   background-color: #72e6cb; }
@@ -98,16 +181,6 @@ ul {
 [class*="grid__col--8 theme__colors"] {
   background-color: #fd987e; }
 
-.blockquote {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 1.25em;
-  color: #818181;
-  padding-left: 0.625em;
-  border-left: solid 6px #58e1c1;
-  border-radius: 3px;
-  margin-bottom: 3.125em; }
-
 .form__input {
   width: 90%;
   border: none;
@@ -126,22 +199,30 @@ ul {
     color: #020202; }
 
 .form .img--avatar {
-  margin: 0 auto;
-  margin-bottom: 2.1875em; }
+  margin: 2.1875em auto; }
+
+@media (min-width: 769px) {
+  .form {
+    margin-top: 1.25em; } }
 
 .nav__item {
   text-align: center;
-  padding-top: 0.625em;
-  padding-bottom: 0.625em;
+  padding: 0.375em 0;
   border-radius: 6px; }
   .nav__item:first-child {
     background-color: #58e1c1; }
+
+.nav a {
+  padding: 0.5em 3.75em; }
+  @media (min-width: 769px) {
+    .nav a {
+      padding: 0.625em; } }
 
 nav {
   margin-top: 2.5em; }
 
 .img--frame {
-  padding: 0.9375em;
+  padding: 13px;
   border: solid 1px #cecece;
   border-radius: 1px;
   margin-bottom: 1.5625em; }
