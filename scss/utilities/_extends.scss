@@ -1,3 +1,7 @@
+%centered {
+	margin: 0 auto;
+}
+
 //Screen reader text
 %srt {
 	border: 0;
@@ -18,6 +22,9 @@
 	padding: em(15px) 0;
 	border: none;
 	border-radius: $brdr-radius;
+	@include mq(medium) {
+		@include gutter-horz(4%);
+	}
 }
 
 //Baseline grid item properties
@@ -27,4 +34,14 @@
 	padding: em(10px);
 	border: none;
 	border-radius: $brdr-radius;
+}
+
+// Vertical gutters(for mobile layout),
+	// and horizontal gutters for desktop layout
+%gutters {
+	@include gutter-vert(em(8px));
+	@include mq(medium) {
+		margin-bottom: 0;
+		@include gutter-horz(em(15px));
+	}
 }

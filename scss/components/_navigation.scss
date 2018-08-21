@@ -5,8 +5,16 @@
     border-radius: $brdr-radius;
 
     &:first-child {
-      background-color: $color-success;
+      background-color: palette(success);
     }
+  }
+}
+
+.nav {
+  @include mq(medium) {
+    @include flexy(row);
+    justify-content: space-between;
+    width: 85%;
   }
 }
 

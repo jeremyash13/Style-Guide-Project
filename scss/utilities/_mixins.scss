@@ -51,6 +51,30 @@
   }
 };
 
+//Adds gutters between sibling flex items, removing the "last-child" margin
+  //for gutters on sides of items
+@mixin gutter-horz($gutter-size) {
+  margin-right: $gutter-size;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+  //for gutters on bottom of items
+@mixin gutter-vert($gutter-size) {
+  margin-bottom: $gutter-size;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//Generate .grid__col--(2 through 12) classes
+@for $i from 2 through $g-col-count {
+  .grid__col--#{$i} {
+    @extend %grid-item;
+    @extend %gutters;
+  }
+}
+
 // @for $i from 3 through $g-col-count {
 //   $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
 //   $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
@@ -59,18 +83,3 @@
 //     width: percentage($target / $context);
 //   }
 // }
-
-@mixin g-columns {
-  @for $i from 2 through 12 {
-    &#{$i} {
-      @extend %grid-item;
-    }
-  }
-}
-
-@mixin gutter($gutter-size) {
-  margin-right: $gutter-size;
-  &:last-child {
-    margin-right: 0;
-  }
-}

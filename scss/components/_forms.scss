@@ -23,6 +23,7 @@
 }
 
 .form {
+  @include flexy(col);
   @include mq(medium) {
     margin-top: em(20px);
   }
