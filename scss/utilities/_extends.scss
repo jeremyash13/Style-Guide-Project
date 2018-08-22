@@ -1,5 +1,5 @@
 %centered {
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 
 //Screen reader text
@@ -41,6 +41,7 @@
 %gutters {
 	@include gutter-vert(em(8px));
 	@include mq(medium) {
+		//creates gutters between items in a row, and removes gutters in items in a column
 		margin-bottom: 0;
 		@include gutter-horz(em(15px));
 	}

@@ -4,3 +4,12 @@
   letter-spacing: em(.7px);
   line-height: em(30px);
 }
+
+.blockquote {
+  @include font($font-regular, italic, em(20px));
+  padding-left: em(10px);
+  border-left: solid 6px palette(success);
+  border-radius: ($brdr-radius - 3);
+  margin-bottom: em(50px);
+  margin-left: em(16px);
+}

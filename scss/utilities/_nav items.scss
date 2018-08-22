@@ -1,0 +1,18 @@
+.nav {
+  &__item {
+    text-align: center;
+    padding: em(8px) 0;
+    border-radius: $brdr-radius;
+
+    &:first-child {
+      background-color: palette(success);
+    }
+  }
+}
+
+.nav a {
+  padding: em(8px) em(60px);
+  @include mq(medium) {
+    padding: em(10px);
+  }
+}

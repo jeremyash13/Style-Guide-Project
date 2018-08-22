@@ -1,27 +1,8 @@
 .nav {
-  &__item {
-    text-align: center;
-    padding: em(6px) 0;
-    border-radius: $brdr-radius;
-
-    &:first-child {
-      background-color: palette(success);
-    }
-  }
-}
-
-.nav {
   @include mq(medium) {
     @include flexy(row);
     justify-content: space-between;
     width: 85%;
-  }
-}
-
-.nav a {
-  padding: em(8px) em(60px);
-  @include mq(medium) {
-    padding: em(10px);
   }
 }
 

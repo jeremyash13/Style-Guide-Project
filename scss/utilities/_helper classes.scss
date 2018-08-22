@@ -1,3 +1,9 @@
 .centered {
   @extend %centered;
 }
+
+.theme__colors {
+  @include mq(medium) {
+    text-align: center;
+  }
+}
